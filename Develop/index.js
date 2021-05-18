@@ -6,36 +6,53 @@ const questions = [
   inquirer.prompt([
     {
       type: "input",
-      name: "name",
-      message: "What is your name?",
+      name: "title",
+      message: "What is the title of your project?",
     },
     {
       type: "input",
-      name: "location",
-      message: "Where are you from?",
+      name: "description",
+      message: "Please add a short description of your project:",
     },
     {
       type: "input",
-      name: "hobby",
-      message: "What is your favorite hobby?",
+      name: "table",
+      message: "Please add your Table of Contents:",
     },
     {
       type: "input",
-      name: "food",
-      message: "What is your favorite food?",
+      name: "installation",
+      message: "What installation is this?",
     },
     {
       type: "input",
       name: "github",
-      message: "Enter your GitHub Username",
+      message: "What is the usage?",
     },
     {
       type: "input",
-      name: "linkedin",
-      message: "Enter your LinkedIn URL.",
+      name: "license",
+      message: "Which licenses are included in your project?",
+    },
+    {
+      type: "input",
+      name: "contributers",
+      message: "Please include the contributers to your project:",
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "What are the test instructions for your project?",
+    },
+    {
+      type: "input",
+      name: "github",
+      message: "What is your Github username?",
     },
   ]),
 ];
+
+console.log(questions);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
