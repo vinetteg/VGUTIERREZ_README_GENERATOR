@@ -17,11 +17,6 @@ const questions = [
       },
       {
         type: "input",
-        name: "table",
-        message: "Please add your Table of Contents:",
-      },
-      {
-        type: "input",
         name: "installation",
         message: "What installation is this?",
       },
@@ -31,9 +26,10 @@ const questions = [
         message: "What is the usage?",
       },
       {
-        type: "input",
+        type: "list",
         name: "license",
-        message: "Which licenses are included in your project?",
+        message: "Please choose the license used for this project:",
+        choices: ["MIT", "GNU", "GPL", "None"],
       },
       {
         type: "input",
@@ -50,6 +46,11 @@ const questions = [
         name: "github",
         message: "What is your Github username?",
       },
+      {
+        type: "input",
+        name: "email",
+        message: "What is your email address?",
+      },
     ])
     .then((answers) => {
       fs.writeFile("README.md", writeToFile(answers), (err) =>
@@ -63,23 +64,45 @@ const questions = [
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 const writeToFile = (answers) =>
-  `## ${answers.title} 
-  ## Summary 
+  `# ${answers.title} 
+  # Description 
   ${answers.description} 
-  ## Table of Contents 
-  ${answers.table} 
-  ## Installation 
-  ${answers.installation} 
-  ## Usage 
-  ${answers.usage} 
-  ## Licenses <br>
-  ${answers.license} 
-  ## Contributers 
-  ${answers.contributes} 
-  ## Instructions 
-  ${answers.test} 
-  ## Github Username 
-  ${answers.github}`;
+  # Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#usage)  
+  * [License](#license)
+  * [Contributers](#contributers)
+  * [Test Instructions](#test-instructions)
+  * [Questions](#questions)
+  
+  # Installation
+  <a name="installation"></a>
+
+  * ${answers.installation} 
+
+  # Usage
+  <a name="usage"></a>
+  * ${answers.usage} 
+
+  # License
+  <a name="license"></a>
+  * ${answers.license} 
+
+
+  # Contributers
+  <a name="contributers"></a>
+  * ${answers.contributers} 
+
+  # Test Instructions
+  <a name="test-instructions"></a>
+  * ${answers.test} 
+
+  # Questions
+  <a name="questions"></a>
+  * [Github Link](https://github.com/${answers.github})
+  * For additional questions, please contact me via email at ${answers.email}
+ `;
 
 // TODO: Create a function to initialize app
 // function init() {}
