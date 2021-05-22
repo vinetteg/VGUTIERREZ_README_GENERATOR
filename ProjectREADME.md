@@ -20,7 +20,15 @@ This README generator is a command line application that will help build a basic
 
 <a name="technologies"></a>
 
-[node.js](https://nodejs.org/en/) <br>
+[node.js](https://nodejs.org/en/)
+
+# Project Links
+
+![Video Image](Develop/utils/images/integtermvid.png) <br>
+[![Video demonstration using VS Code Integrated Terminal]](https://youtu.be/LYus5NM7U04)
+
+![Video Image](Develop/utils/images/image2.png) <br>
+[![Video demonstration using VS Code Integrated Terminal]](https://youtu.be/dV2_mTiKYO4)
 
 # How To Use
 
