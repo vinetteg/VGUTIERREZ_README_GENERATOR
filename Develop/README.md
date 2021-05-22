@@ -21,7 +21,7 @@
 
   # License
   <a name="license"></a>
-  * None 
+  * MIT 
 
 
   # Contributers
